@@ -28,8 +28,8 @@ const unAuth = (res, mes, isExpired = false) => {
    }
    return res.status(err.status).json(error);
 }
-const internalServerError = (req, res) => {
-   // logError(err, req, res);
+const internalServerError = (e, req, res) => {
+   logError(e, req, res);
    const err = createError.InternalServerError();
    const error = {
       DT: '',

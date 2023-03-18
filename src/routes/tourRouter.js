@@ -1,24 +1,17 @@
 // import * as controllers from '../controllers/'
 import express from 'express'
-import verifyToken from '../middleware/verifyToken'
-import { uploads } from '../middleware/uploadImage'
-
-
-
+import * as controllers from '../controllers/tourController'
 const router = express.Router()
-// router.route('/')
-//    .get()
+router.route('/')
+   .get(controllers.getAllTours)
+   .post()
 
-// router.post('/login', controllers.login)
-// router.post('/register', controllers.register)
-// router.post('/refresh-token', controllers.refreshToken)
-// router.post('/logout', controllers.logOut)
+router.route('/:id')
+   .get()
+   .patch()
+   .delete()
 
-// router.use(verifyToken)
-// router.post('/update-profile', uploads.single('userImage'), controllers.updateProfile)
-
-
-
-
+router.route('/top-5-tours')
+   .get(controllers.top5Tours)
 
 export default router;

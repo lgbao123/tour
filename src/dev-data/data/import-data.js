@@ -1,11 +1,11 @@
-import Tour from '../../models/tourModel.js'
-import connection from '../../config/database.js'
+import Tour from '../../models/tourModel'
+import connection from '../../config/database'
 import fs from 'fs'
-import { fileURLToPath } from 'url';
-import path from 'path';
+// import { fileURLToPath } from 'url';
+// import path from 'path';
 
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
+// const __filename = fileURLToPath(import.meta.url);
+// const __dirname = path.dirname(__filename);
 connection();
 const fileTour = JSON.parse(fs.readFileSync(`${__dirname}/tours-simple.json`, 'utf-8'))
 const importData = async () => {

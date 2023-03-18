@@ -2,7 +2,7 @@
 import "dotenv/config.js";
 
 import express from 'express'
-import configViewEngine from './config/viewEngine'
+import configViewEngine from './config/viewEngine.js'
 import connection from './config/database'
 import initRoutes from './routes/index'
 import bodyParser from 'body-parser';
