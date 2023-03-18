@@ -1,7 +1,6 @@
 
-require('dotenv').config()
-// var jwt = require('jsonwebtoken');
-const { unAuth } = require('./handleError');
+
+import { unAuth } from './handleError';
 export const isAdmin = (req, res, next) => {
    const { role } = req.user;
 

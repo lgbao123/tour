@@ -1,5 +1,5 @@
 import multer from 'multer';
-require('dotenv').config()
+import "dotenv/config.js";
 import cloudinary from 'cloudinary'
 import streamifier from 'streamifier'
 

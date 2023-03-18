@@ -1,5 +1,5 @@
 'use strict';
-const bcryptjs = require('bcryptjs')
+import bcryptjs from 'bcryptjs'
 /** @type {import('sequelize-cli').Migration} */
 module.exports = {
   async up(queryInterface, Sequelize) {

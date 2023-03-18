@@ -1,8 +1,7 @@
 
-require('dotenv').config()
 import jwt, { TokenExpiredError } from "jsonwebtoken";
 // var jwt = require('jsonwebtoken');
-const { unAuth } = require('./handleError');
+import { unAuth } from './handleError';
 const verifyToken = (req, res, next) => {
    let token = req.headers["authorization"]
    if (!token) return unAuth(res, 'You must login')

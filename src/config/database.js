@@ -1,6 +1,6 @@
 // const { Sequelize } = require('sequelize');
 import mongoose from 'mongoose';
-require('dotenv').config();
+import "dotenv/config.js";
 
 const user = process.env.DB_USER
 const password = process.env.DB_PASSWORD

@@ -1,5 +1,5 @@
 import bcryptjs from 'bcryptjs'
-require('dotenv').config()
+import "dotenv/config.js";
 import path from "path";
 
 export const hashPassword = password => bcryptjs.hashSync(password, bcryptjs.genSaltSync(10))
